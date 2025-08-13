@@ -31,7 +31,7 @@ import org.xml.sax.helpers.XMLReaderFactory;
  * project's classpath, including poi, poi-ooxml, and poi-ooxml-schemas.
  * You might also need xml-apis and xercesImpl. See pom.xml for Maven details.
  */
-public class PopAnalysis extends JFrame {
+public class ExcelReader extends JFrame {
 
     // The specific sheets we want to read from the Excel file.
     private static final String[] TARGET_SHEET_NAMES = {
@@ -43,7 +43,7 @@ public class PopAnalysis extends JFrame {
     private JTabbedPane tabbedPane;
     private JLabel infoLabel;
 
-    public PopAnalysis() {
+    public ExcelReader() {
         super("Excel Sheet Viewer (Streaming Mode)");
 
         // --- UI Setup ---
@@ -184,7 +184,7 @@ public class PopAnalysis extends JFrame {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-            new PopAnalysis().setVisible(true);
+            new ExcelReader().setVisible(true);
         });
     }
 
